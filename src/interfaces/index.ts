@@ -48,7 +48,7 @@ export enum TransactionType {
   SELL,
 }
 
-export type Transaction = {
+export type TradingState = {
   created: number
   activity: string
   baseAmount: string
@@ -56,6 +56,15 @@ export type Transaction = {
   tokenPriceSOL: string
   tokenPriceUSD: string
   trading: string
+}
+
+export type SnipingState = {
+  created: number
+  poolId: string
+  tokenAddress: string
+  isLocked: string
+  poolSize: string
+  sniping: string
 }
 
 export type ActivityState = {
@@ -72,12 +81,53 @@ export type ActivityState = {
   }
 }
 
-export type ActivityObject = {
+export type TradingObject = {
   id: number
-  state: ActivityState
+  state: {
+    transactionType: TransactionType
+    transactionBaseAmount: number
+    transactionQuoteAmount: number
+    tokenPriceSOL: number
+    tokenPriceBase: number
+    tokenPriceUSB: number
+    bundle?: {
+      diff: number
+      buySlippage: number
+      sellSlippage: number
+    }
+    trading?: {
+      type: number
+      profit: number
+    }
+  }
 }
 
-export type UserForm = {
-  name: string
-  email: string
+export type SnipingObject = {
+  id: number
+  state: {
+    poolId: string
+    tokenAddress: number
+    isLocked: number
+    poolSize: number
+    buying?: {
+      amount: number
+    }
+  }
+}
+
+export type TradingSettingsForm = {
+  privateKey: string
+  tokenAddress: string
+  buyAmount: number
+  buySlipage: number
+  sellSlipage: number
+  jitoTips: number
+}
+
+export type SnipingSettingsForm = {
+  privateKey: string
+  minPoolSize: number
+  maxPoolSize: number
+  buyAmount: number
+  checkLocked: boolean
 }

@@ -1,16 +1,7 @@
 import {
-  mdiAccountCircle,
   mdiMonitor,
-  mdiGithub,
-  mdiLock,
-  mdiAlertCircle,
   mdiSquareEditOutline,
   mdiTable,
-  mdiViewList,
-  mdiTelevisionGuide,
-  mdiResponsive,
-  mdiPalette,
-  mdiVuejs,
 } from '@mdi/js'
 import { MenuAsideItem } from './interfaces'
 
@@ -26,7 +17,7 @@ const menuAside: MenuAsideItem[] = [
     icon: mdiTable,
   },
   {
-    href: '/forms',
+    href: '/settings',
     label: 'Settings',
     icon: mdiSquareEditOutline,
   },

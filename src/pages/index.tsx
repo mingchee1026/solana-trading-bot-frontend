@@ -11,8 +11,7 @@ const HomePage = () => {
   const dispatch = useAppDispatch()
 
   dispatch(setDarkMode(true))
-
-  useTransactionData('http://localhost:8000/api/sse/substxs')
+  useTransactionData(`${process.env.NEXT_PUBLIC_API_URL}/sse/substxs`)
 
   return (
     <>
