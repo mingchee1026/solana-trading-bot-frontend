@@ -25,8 +25,7 @@ const initialState: MainState = {
 
   /* Field focus with ctrl+k (to register only once) */
   tradingSettingsForm: {
-    privateKey:
-      '2aBpyDhqUwW9picCMn1HzQ49LoFYJLQ7agfNmpC521K74bXHEKJbKTxxmPAztgcvQKSWsoRoHMMvzvpz9mtamrL',
+    privateKey: '',
     tokenAddress: 'HQ7DaoiUxzC2K1Dr7KXRHccNtXvEYgNvoUextXe8dmBh',
     buyAmount: 0.01,
     buySlipage: 50,
@@ -34,8 +33,7 @@ const initialState: MainState = {
     jitoTips: 0.001,
   },
   snipingSettingsForm: {
-    privateKey:
-      '2aBpyDhqUwW9picCMn1HzQ49LoFYJLQ7agfNmpC521K74bXHEKJbKTxxmPAztgcvQKSWsoRoHMMvzvpz9mtamrL',
+    privateKey: '',
     minPoolSize: 8,
     maxPoolSize: 0,
     buyAmount: 0.01,
