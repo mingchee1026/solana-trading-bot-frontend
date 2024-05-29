@@ -37,7 +37,9 @@ const PoolSniperPage = () => {
         tokenAddress: activity.state.tokenAddress,
         isLocked: activity.state.isLocked,
         poolSize: activity.state.poolSize,
-        sniping: activity.state.buying ? 'BUY' : '',
+        sniping: activity.state.buying
+          ? `https://solscan.io/tx/${activity.state.buying.signature}`
+          : '',
       })
     }
 

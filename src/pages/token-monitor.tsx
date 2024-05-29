@@ -52,7 +52,7 @@ const TokenMonitor = () => {
         tokenPriceSOL: activity.state.tokenPriceSOL.toFixed(14),
         tokenPriceUSD: activity.state.tokenPriceUSB.toFixed(14),
         trading: activity.state.bundle
-          ? `DIFF: ${toPlainString(activity.state.bundle.diff)}<br>BUY SLIPPAGE: ${activity.state.bundle.buySlippage}%<br>SELL SLIPPAGE: ${activity.state.bundle.sellSlippage}%`
+          ? `BUNDLE, DIFF: ${toPlainString(activity.state.bundle.diff)}`
           : activity.state.trading
             ? tradingInfo
             : '',

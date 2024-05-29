@@ -54,7 +54,13 @@ const TableSniping = ({ data }) => {
               <td data-label="tokenPriceSOL" className="text-right">
                 {state.poolSize}
               </td>
-              <td data-label="trading">{state.sniping}</td>
+              <td data-label="trading">
+                {state.sniping !== '' && (
+                  <a href={state.sniping} target="_blank">
+                    BUY
+                  </a>
+                )}
+              </td>
             </tr>
           ))}
         </tbody>

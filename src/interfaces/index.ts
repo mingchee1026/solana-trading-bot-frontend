@@ -110,7 +110,7 @@ export type SnipingObject = {
     isLocked: number
     poolSize: number
     buying?: {
-      amount: number
+      signature: string
     }
   }
 }
