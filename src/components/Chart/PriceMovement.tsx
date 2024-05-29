@@ -49,8 +49,8 @@ const PriceChartLine = ({ data }) => {
         style: 'hollow',
       },
       xaxis: {
-        categories: data?.map((data) => data[0]),
         type: 'datetime',
+        categories: data?.map((data) => data[0]),
         tickAmount: 10,
       },
       yaxis: {
@@ -97,9 +97,9 @@ const PriceChartLine = ({ data }) => {
       type="area"
       height={200}
       width="100%"
-      options={state.options}
+      options={state}
       series={state.series}
-      className="h-36"
+      // className="h-36"
     />
   )
 }

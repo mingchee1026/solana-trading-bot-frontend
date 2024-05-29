@@ -3,6 +3,11 @@ export type UserPayloadObject = {
   email: string
 }
 
+export type UserForm = {
+  name: string
+  email: string
+}
+
 export type MenuAsideItem = {
   label: string
   icon?: string
