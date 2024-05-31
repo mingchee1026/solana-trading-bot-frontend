@@ -14,9 +14,12 @@ import SectionTitleLineWithButton from '../components/Section/TitleLineWithButto
 import TableSniping from '../components/Table/Sniping'
 import { getPageTitle } from '../config'
 import { setRunSniping } from '../stores/mainSlice'
+import useTransactionData from '../hooks/useTransactionData'
 
 const PoolSniperPage = () => {
   const dispatch = useAppDispatch()
+
+  useTransactionData(`${process.env.NEXT_PUBLIC_API_URL}/sse/substxs`)
 
   const snipingSettings = useSelector((state: RootState) => state.main.snipingSettingsForm)
   const snipinggData = useSelector((state: RootState) => state.main.snipingData)

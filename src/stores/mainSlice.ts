@@ -26,7 +26,7 @@ const initialState: MainState = {
   /* Field focus with ctrl+k (to register only once) */
   tradingSettingsForm: {
     privateKey: '',
-    tokenAddress: 'HQ7DaoiUxzC2K1Dr7KXRHccNtXvEYgNvoUextXe8dmBh',
+    tokenAddress: 'sfYDFZJguyF4YLZjje7qwwh41NRymFfZ3QXZbVm7Eyg',
     buyAmount: 0.01,
     buySlipage: 50,
     sellSlipage: 50,

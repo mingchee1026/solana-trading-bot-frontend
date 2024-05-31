@@ -15,9 +15,12 @@ import PriceChartLine from '../components/Chart/PriceMovement'
 import TableTrading from '../components/Table/Trading'
 import { getPageTitle } from '../config'
 import { setRunTrading } from '../stores/mainSlice'
+import useTransactionData from '../hooks/useTransactionData'
 
 const TokenMonitor = () => {
   const dispatch = useAppDispatch()
+
+  useTransactionData(`${process.env.NEXT_PUBLIC_API_URL}/sse/substxs`)
 
   const tradingSettings = useSelector((state: RootState) => state.main.tradingSettingsForm)
   const tradingData = useSelector((state: RootState) => state.main.tradingData)

@@ -5,13 +5,13 @@ import SectionMain from '../components/Section/Main'
 import { appTitle } from '../config'
 import { useAppDispatch } from '../stores/hooks'
 import { setDarkMode } from '../stores/darkModeSlice'
-import useTransactionData from '../hooks/useTransactionData'
+// import useTransactionData from '../hooks/useTransactionData'
 
 const HomePage = () => {
   const dispatch = useAppDispatch()
 
   dispatch(setDarkMode(true))
-  useTransactionData(`${process.env.NEXT_PUBLIC_API_URL}/sse/substxs`)
+  // useTransactionData(`${process.env.NEXT_PUBLIC_API_URL}/sse/substxs`)
 
   return (
     <>

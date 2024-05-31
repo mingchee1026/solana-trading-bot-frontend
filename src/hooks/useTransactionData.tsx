@@ -12,9 +12,9 @@ const useTransactionData = (serverEndpoint: string) => {
       dispatch(setTradingData(JSON.parse(activities.tradingData)))
       dispatch(setSnipingData(JSON.parse(activities.snipingData)))
     }
-    // return () => {
-    //   eventSource.close()
-    // }
+    return () => {
+      eventSource.close()
+    }
   }, [dispatch, serverEndpoint])
 }
 
